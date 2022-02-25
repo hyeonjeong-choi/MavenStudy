@@ -23,6 +23,8 @@ public class HelloWorldController {
 }
 
 /*
+참고: https://copycoding.tistory.com/178?category=1044812
+
 /helloWorld/hello: 내부에서 생성한 메시지 전달
 /displayMessage/{메시지}: 외부에서 받은 메시지를 그대로 전달(또는 가공도 할 수 있다)
 */
