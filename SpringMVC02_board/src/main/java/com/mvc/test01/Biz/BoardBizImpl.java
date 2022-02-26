@@ -2,14 +2,24 @@ package com.mvc.test01.Biz;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mvc.test01.Dao.BoardDao;
 import com.mvc.test01.Dto.BoardDto;
 
+// @Service : 이 bizImpl이 진짜 Service의 역할을 함
+
+@Service
 public class BoardBizImpl implements BoardBiz {
+	
+	@Autowired
+	private BoardDao dao;
+	
 
 	@Override
 	public List<BoardDto> selectList() {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.selectList();
 	}
 
 	@Override

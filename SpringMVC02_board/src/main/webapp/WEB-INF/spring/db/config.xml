@@ -8,6 +8,6 @@
 	</typeAliases>
 	
 	<mappers>
-		<mapper resource="/db/board-mapper.xml"/>
+		<mapper resource="db/board-mapper.xml"/>
 	</mappers>
 </configuration>

@@ -7,7 +7,7 @@ public class BoardDto {
 	private String bd_name;
 	private String bd_title;
 	private String bd_content;
-	private Date db_date;
+	private Date bd_date;
 	
 	public BoardDto() {
 		super();
@@ -19,7 +19,7 @@ public class BoardDto {
 		this.bd_name = bd_name;
 		this.bd_title = bd_title;
 		this.bd_content = bd_content;
-		this.db_date = bd_date;
+		this.bd_date = bd_date;
 	}
 	
 	public int getBd_no() {
@@ -46,11 +46,11 @@ public class BoardDto {
 	public void setBd_content(String bd_content) {
 		this.bd_content = bd_content;
 	}
-	public Date getDb_date() {
-		return db_date;
+	public Date getBd_date() {
+		return bd_date;
 	}
-	public void setDb_date(Date db_date) {
-		this.db_date = db_date;
+	public void setBd_date(Date bd_date) {
+		this.bd_date = bd_date;
 	}
 	
 	

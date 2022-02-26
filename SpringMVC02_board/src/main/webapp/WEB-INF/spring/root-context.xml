@@ -13,13 +13,14 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
 	<!-- db.properties 읽어오기 -->
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfiqurer">
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath:db/db.properties</value>
+				<value>classpath:db.properties</value>
 			</list>
 		</property>
 	</bean>
+	<!-- <context:property-placeholder location="classpath:db/db.properties"/> -->
 	
 	<!-- dataSource에 관한 정보 -->
 	<bean class="org.apache.commons.dbcp.BasicDataSource" id="dataSource">

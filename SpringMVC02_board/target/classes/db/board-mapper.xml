@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myboard">
+
+	<resultMap type="boardDto" id="boardMap">
+		<result property="bd_no" column="BD_NO"/>
+		<result property="bd_name" column="BD_NAME"/>
+		<result property="bd_title" column="BD_TITLE"/>
+		<result property="bd_content" column="BD_CONTENT"/>
+		<result property="bd_date" column="BD_DATE"/>
+	</resultMap>
+
+	<select id="selectList" resultMap="boardMap">
+		SELECT BD_NO, BD_NAME, BD_TITLE, BD_CONTENT, BD_DATE
+		FROM STSBOARD
+	</select>
+</mapper>
