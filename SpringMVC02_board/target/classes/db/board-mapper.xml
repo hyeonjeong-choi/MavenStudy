@@ -22,4 +22,9 @@
 		FROM STSBOARD
 		WHERE BD_NO = #{bd_no}
 	</select>
+	
+	<insert id="insert" parameterType="boardDto">
+		INSERT INTO STSBOARD
+		VALUES(STSBD_SEQ.NEXTVAL, #{bd_name}, #{bd_title}, #{bd_content}, SYSDATE)
+	</insert>
 </mapper>

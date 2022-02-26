@@ -29,8 +29,7 @@ public class BoardBizImpl implements BoardBiz {
 
 	@Override
 	public int insert(BoardDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dao.insert(dto);
 	}
 
 	@Override
