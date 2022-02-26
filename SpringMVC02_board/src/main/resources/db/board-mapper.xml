@@ -16,4 +16,10 @@
 		SELECT BD_NO, BD_NAME, BD_TITLE, BD_CONTENT, BD_DATE
 		FROM STSBOARD
 	</select>
+	
+	<select id="selectOne" resultType="boardDto" parameterType="int">
+		SELECT BD_NO, BD_NAME, BD_TITLE, BD_CONTENT, BD_DATE
+		FROM STSBOARD
+		WHERE BD_NO = #{bd_no}
+	</select>
 </mapper>

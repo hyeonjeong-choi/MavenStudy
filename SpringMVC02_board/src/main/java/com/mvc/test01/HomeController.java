@@ -47,13 +47,25 @@ public class HomeController {
 	
 	@RequestMapping("/list.do")
 	public String home(Model model) {
-		logger.info("Main Page");
+		logger.info("MAIN PAGE");
 		
 		//BoardBiz biz = sqlSession.getMapper(BoardBiz.class);
 		
 		model.addAttribute("list", biz.selectList());
 		
 		return "main";
+	}
+	
+	@RequestMapping("/one.do")
+	public String one(Model model, int bd_no) {
+		// ond.do 실행될 때 콘솔창에 'SELECT ONE' 출력
+		logger.info("SELECT ONE");
+		
+		// biz의 selectOne() 메소드를 통해서 dto 가져옴
+		model.addAttribute("dto", biz.selectOne(bd_no));
+		
+		// selectone.jsp로 리턴
+		return "selectone";
 	}
 	
 }

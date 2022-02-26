@@ -24,8 +24,7 @@ public class BoardBizImpl implements BoardBiz {
 
 	@Override
 	public BoardDto selectOne(int bd_no) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.selectOne(bd_no);
 	}
 
 	@Override

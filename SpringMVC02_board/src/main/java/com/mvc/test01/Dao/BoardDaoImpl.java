@@ -36,8 +36,16 @@ public class BoardDaoImpl implements BoardDao {
 
 	@Override
 	public BoardDto selectOne(int bd_no) {
-		// TODO Auto-generated method stub
-		return null;
+		BoardDto dto = null;
+		
+		try 
+		{
+			dto = sqlSession.selectOne(NAMESPACE+"selectOne", bd_no);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return dto;
 	}
 
 	@Override
