@@ -34,8 +34,7 @@ public class BoardBizImpl implements BoardBiz {
 
 	@Override
 	public int update(BoardDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dao.update(dto);
 	}
 
 	@Override

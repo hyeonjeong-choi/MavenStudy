@@ -27,4 +27,10 @@
 		INSERT INTO STSBOARD
 		VALUES(STSBD_SEQ.NEXTVAL, #{bd_name}, #{bd_title}, #{bd_content}, SYSDATE)
 	</insert>
+	
+	<update id="update" parameterType="boardDto">
+		UPDATE STSBOARD
+		SET BD_TITLE=#{bd_title}, BD_CONTENT=#{bd_content}
+		WHERE BD_NO=#{bd_no}
+	</update>
 </mapper>

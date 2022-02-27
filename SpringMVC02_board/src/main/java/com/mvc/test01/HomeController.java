@@ -91,4 +91,27 @@ public class HomeController {
 			return "redirect:insert.do";
 		}
 	}
+	
+	// 게시글 update 페이지
+	@RequestMapping("/update.do")
+	public String update(Model model, int bd_no) {
+		logger.info("UPDATE PAGE");
+		
+		model.addAttribute("dto", biz.selectOne(bd_no));
+		
+		return "update";
+	}
+	
+	// 게시글 update
+	@RequestMapping("/bdupdate.do")
+	public String updateBoard(BoardDto dto) {
+		logger.info("UPDATE");
+		
+		int res = biz.update(dto);
+		if(res>0) {
+			return "redirect:one.do?bd_no="+dto.getBd_no();
+		} else {
+			return "redirect:update.do?bd_no="+dto.getBd_no();
+		}
+	}
 }
