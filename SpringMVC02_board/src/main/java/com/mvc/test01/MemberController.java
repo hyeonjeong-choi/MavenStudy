@@ -33,10 +33,13 @@ public class MemberController {
 		
 		// 技记 积己
 		HttpSession session = request.getSession();
+		System.out.println("技记 酒捞叼: " + session.getId());
+		
+		// 技记 蜡瓤矫埃
+		session.setMaxInactiveInterval(3600);
+		System.out.println("技记 蜡瓤矫埃: " + session.getMaxInactiveInterval());
 		
 		MemberDto res = biz.login(dto);
-		
-		System.out.println(res);
 		
 		if(res!=null) {
 			// 技记 历厘
